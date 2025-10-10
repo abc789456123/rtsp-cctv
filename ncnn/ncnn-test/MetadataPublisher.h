@@ -88,6 +88,16 @@ public:
     void publishDetections(const std::vector<Object>& objects, int frame_width, int frame_height, const std::string& camera_id = "camera_0");
     
     /**
+     * @brief Create JSON metadata string from detection objects
+     * @param objects Vector of detected objects
+     * @param frame_width Frame width in pixels
+     * @param frame_height Frame height in pixels
+     * @param camera_id Camera identifier string
+     * @return JSON metadata string
+     */
+    std::string createJsonMetadata(const std::vector<Object>& objects, int frame_width, int frame_height, const std::string& camera_id = "camera_0");
+    
+    /**
      * @brief Get current queue size
      * @return Number of items in publishing queue
      */

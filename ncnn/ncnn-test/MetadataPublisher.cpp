@@ -116,6 +116,17 @@ void MetadataPublisher::publishDetections(const std::vector<Object>& objects, in
     }
 }
 
+std::string MetadataPublisher::createJsonMetadata(const std::vector<Object>& objects, int frame_width, int frame_height, const std::string& camera_id) {
+    DetectionMetadata metadata;
+    metadata.timestamp = std::chrono::system_clock::now();
+    metadata.objects = objects;
+    metadata.frame_width = frame_width;
+    metadata.frame_height = frame_height;
+    metadata.camera_id = camera_id;
+    
+    return createJsonMetadata(metadata);
+}
+
 int MetadataPublisher::getQueueSize() const {
     std::lock_guard<std::mutex> lock(queue_mutex_);
     return metadata_queue_.size();
@@ -141,9 +152,10 @@ void MetadataPublisher::publishingLoop() {
             std::string json_data = createJsonMetadata(metadata);
             
             // For debugging, print to console instead of HTTP POST
-            std::cout << "=== Metadata JSON ===" << std::endl;
-            std::cout << json_data << std::endl;
-            std::cout << "===================" << std::endl;
+            // metadata 출력하는 코드인데 일단 로그 확인하려고 주석처리함
+            //std::cout << "=== Metadata JSON ===" << std::endl;
+            //std::cout << json_data << std::endl;
+            //std::cout << "===================" << std::endl;
             
             // Attempt HTTP POST (will fail if no server, but that's OK for demo)
             if (sendHttpPost(json_data)) {

@@ -61,10 +61,10 @@ bool Application::initializeComponents() {
     }
     std::cout << "YOLO model loaded successfully" << std::endl;
     
-    // Initialize RTSP streamer
-    std::cout << "Initializing RTSP streamer..." << std::endl;
-    if (!rtsp_streamer_->initialize(config.rtsp_url, config.frame_width, config.frame_height, config.frame_fps)) {
-        std::cerr << "Failed to initialize RTSP streamer" << std::endl;
+    // Initialize RTSP server
+    std::cout << "Initializing RTSP server..." << std::endl;
+    if (!rtsp_streamer_->initialize("rtsp://localhost:8554/stream", config.frame_width, config.frame_height, config.frame_fps, config.rtsp_port)) {
+        std::cerr << "Failed to initialize RTSP server" << std::endl;
         return false;
     }
     
@@ -104,26 +104,36 @@ bool Application::initializeCamera() {
         }
     }
     
-    // Set camera properties
+    // Set camera properties for stability
+    camera_->set(cv::CAP_PROP_BUFFERSIZE, 1); // Minimal buffer to avoid delays
     camera_->set(cv::CAP_PROP_FRAME_WIDTH, config.frame_width);
     camera_->set(cv::CAP_PROP_FRAME_HEIGHT, config.frame_height);
     camera_->set(cv::CAP_PROP_FPS, config.frame_fps);
-    camera_->set(cv::CAP_PROP_BUFFERSIZE, 1);
     
-    // Test camera
+    // Additional properties for V4L2 stability
+    camera_->set(cv::CAP_PROP_FOURCC, cv::VideoWriter::fourcc('M','J','P','G'));
+    camera_->set(cv::CAP_PROP_AUTO_EXPOSURE, 0.25); // Manual exposure
+    
+    // Test camera with timeout
     cv::Mat test_frame;
-    for (int i = 0; i < 10; i++) {
+    bool camera_ready = false;
+    for (int i = 0; i < 20; i++) { // Increased attempts
         *camera_ >> test_frame;
         if (!test_frame.empty()) {
             std::cout << "Camera initialized successfully" << std::endl;
             std::cout << "Actual frame size: " << test_frame.cols << "x" << test_frame.rows << std::endl;
-            return true;
+            camera_ready = true;
+            break;
         }
         std::this_thread::sleep_for(std::chrono::milliseconds(100));
     }
     
-    std::cerr << "Camera test failed - no frames received" << std::endl;
-    return false;
+    if (!camera_ready) {
+        std::cerr << "Camera test failed - no frames received" << std::endl;
+        return false;
+    }
+    
+    return true;
 }
 
 int Application::run() {
@@ -138,11 +148,20 @@ int Application::run() {
     
     cv::Mat frame;
     while (running_) {
-        // Capture frame
-        *camera_ >> frame;
-        if (frame.empty()) {
-            std::cerr << "Failed to capture frame" << std::endl;
+        // Capture frame with timeout protection
+        bool frame_captured = false;
+        for (int retry = 0; retry < 3; retry++) {
+            *camera_ >> frame;
+            if (!frame.empty()) {
+                frame_captured = true;
+                break;
+            }
             std::this_thread::sleep_for(std::chrono::milliseconds(10));
+        }
+        
+        if (!frame_captured) {
+            std::cerr << "Failed to capture frame after retries" << std::endl;
+            std::this_thread::sleep_for(std::chrono::milliseconds(100));
             continue;
         }
         
@@ -153,13 +172,24 @@ int Application::run() {
         
         // Handle keyboard input
         if (config.show_display) {
-            char key = cv::waitKey(1);
-            if (key != -1) {
-                handleKeyInput(key);
+            try {
+                char key = cv::waitKey(1);
+                if (key != -1) {
+                    handleKeyInput(key);
+                }
+            } catch (...) {
+                std::cerr << "Display error, switching to headless mode" << std::endl;
+                // Force headless mode if display fails
+                break;
             }
         } else {
-            // Small delay when not showing display
-            std::this_thread::sleep_for(std::chrono::milliseconds(10));
+            // Small delay when not showing display and check for interruption
+            std::this_thread::sleep_for(std::chrono::milliseconds(33)); // ~30fps timing
+        }
+        
+        // Additional check for running_ flag (helps with signal handling)
+        if (!running_) {
+            break;
         }
     }
     
@@ -267,7 +297,7 @@ void Application::printStatistics() {
     std::cout << "Total detections: " << detection_count_ << std::endl;
     std::cout << "Metadata queue size: " << metadata_publisher_->getQueueSize() << std::endl;
     std::cout << "Metadata published: " << metadata_publisher_->getPublishedCount() << std::endl;
-    std::cout << "RTSP streaming: " << (rtsp_streamer_->isStreaming() ? "Active" : "Inactive") << std::endl;
+    std::cout << "RTSP streaming: " << (rtsp_streamer_->isRunning() ? "Active" : "Inactive") << std::endl;
     std::cout << "Metadata publisher: " << (metadata_publisher_->isRunning() ? "Active" : "Inactive") << std::endl;
     
     if (elapsed.count() > 0) {

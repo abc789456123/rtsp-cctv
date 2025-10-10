@@ -1,0 +1,4212 @@
+=== AI Detection System with RTSP Streaming ===
+Features:
+- Real-time object detection using YOLOv4-tiny
+- RTSP video streaming
+- JSON metadata publishing
+- Configurable thresholds and settings
+================================================
+Using config file: config.json
+=== Initializing AI Detection System ===
+Config loaded from: config.json
+=== Current Configuration ===
+Detection threshold: 0.25
+NMS threshold: 0.45
+Camera ID: 2
+Frame size: 1280x720
+Frame FPS: 30
+RTSP URL: rtsp://localhost:8554/stream
+RTSP Port: 8554
+Metadata interval: 100ms
+Metadata host: localhost:8080
+Metadata endpoint: /metadata
+Model path: ncnn-model/yolov4-tiny
+Use GPU: No
+Show display: No
+Draw detections: Yes
+=============================
+Loading YOLO model...
+YOLO model loaded successfully
+Initializing RTSP server...
+RTSP Pipeline: ( appsrc name=mysrc is-live=true format=time caps=video/x-raw,format=BGR,width=1280,height=720,framerate=30/1 ! videoconvert ! video/x-raw,format=I420 ! x264enc tune=zerolatency bitrate=2000 speed-preset=ultrafast profile=baseline ! rtph264pay name=pay0 pt=96 )
+Direct RTSP Server initialized
+Resolution: 1280x720 @ 30fps
+RTSP URL: rtsp://localhost:8554/stream
+RTSP server attached successfully to port 8554
+RTSP server loop started
+RTSP server thread started
+Direct RTSP Server started successfully
+Stream URL: rtsp://localhost:8554/stream
+VLC: Media > Open Network Stream > rtsp://localhost:8554/stream
+Initializing metadata publisher...
+Metadata Publisher initialized: localhost:8080/metadata
+Publish interval: 100ms
+Metadata Publisher started
+Initializing camera 2...
+Camera initialized successfully
+Actual frame size: 1280x720
+=== System Initialized Successfully ===
+=== Starting AI Detection System ===
+Press 'q' to quit, 's' for statistics, 'c' to show config
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:25.564Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:25.826Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:26.054Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:26.322Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:26.557Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:26.788Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:27.019Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:27.254Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:27.505Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:27.749Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:27.997Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:28.224Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:28.468Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:28.752Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:29.008Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:29.291Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:29.540Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+Media constructed, appsrc configured
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:29.783Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:30.030Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:30.268Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:30.496Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:30.738Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:30.975Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:31.244Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:31.480Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:31.735Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:31.982Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:32.247Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:32.479Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:32.733Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:32.963Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:33.189Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:33.409Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:33.637Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:33.887Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+Media constructed, appsrc configured
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:34.116Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:34.368Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:34.607Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:34.858Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:35.098Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:35.328Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:35.552Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:35.792Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:36.045Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:36.277Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:36.531Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:36.770Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:37.034Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:37.268Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:37.519Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:37.748Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:37.988Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:38.222Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:38.449Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:38.710Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:38.945Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:39.187Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:39.420Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:39.665Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:39.901Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:40.140Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:40.378Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:40.613Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:40.862Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:41.098Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:41.352Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:41.583Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:41.834Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:42.065Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+Media constructed, appsrc configured
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:42.367Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:42.607Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:42.871Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:43.118Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:43.369Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:43.604Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:43.854Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:44.081Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:44.315Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:44.576Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:44.809Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:45.068Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:45.295Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:45.547Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:45.783Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:46.005Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:46.246Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:46.474Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:46.728Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:46.955Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:47.231Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:47.465Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:47.718Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:47.958Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:48.204Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:48.446Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+Media constructed, appsrc configured
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:48.727Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:48.958Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:49.185Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:49.416Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:49.647Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:49.948Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:50.177Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:50.425Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:50.656Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:50.912Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:51.159Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:51.416Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:51.649Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:51.887Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:52.126Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:52.368Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:52.610Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:52.852Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:53.110Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:53.346Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:53.595Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:53.836Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:54.105Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:54.333Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:54.604Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:54.837Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:55.096Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:55.342Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:55.575Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:55.811Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:56.045Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:56.307Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:56.542Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:56.791Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:57.019Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:57.267Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:57.502Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:57.736Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+Media constructed, appsrc configured
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:57.991Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:58.215Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:58.465Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:58.705Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:58.977Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:59.202Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:59.452Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:59.684Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:04:59.932Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:00.178Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:00.417Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:00.643Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:00.878Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:01.131Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:01.359Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:01.609Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:01.845Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+Media constructed, appsrc configured
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:02.101Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:02.343Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:02.592Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:02.832Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:03.068Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:03.309Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:03.537Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:03.784Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:04.024Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:04.279Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:04.513Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:04.773Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:05.001Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:05.247Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:05.472Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:05.706Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:05.937Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:06.167Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:06.430Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:06.673Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:06.931Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:07.177Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:07.493Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:07.803Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:08.061Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:08.292Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:08.540Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:08.786Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:09.054Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:09.290Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:09.557Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:09.810Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:10.049Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:10.274Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:10.556Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:10.790Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:11.031Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:11.265Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:11.494Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:11.747Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:11.976Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:12.226Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:12.458Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:12.695Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:12.953Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:13.248Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:13.509Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:13.744Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:13.989Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:14.251Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:14.573Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:14.892Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:15.208Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+Media constructed, appsrc configured
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:15.532Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:15.831Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:16.074Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:16.300Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:16.542Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:16.779Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:17.033Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:17.261Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:17.498Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:17.752Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:17.998Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+
+Received signal 2, shutting down gracefully...
+Stopping application...
+=== Statistics ===
+Runtime: 52 seconds
+Frames processed: 215
+Total detections: 0
+Metadata queue size: 1
+Metadata published: 0
+RTSP streaming: Active
+Metadata publisher: Active
+Average FPS: 4
+Detections per second: 0
+==================
+Application stopped successfully
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:05:18.232Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+Application stopped
+Application exited with code: 0
+Metadata Publisher stopped
+RTSP server loop ended
+Direct RTSP Server stopped
+=== AI Detection System with RTSP Streaming ===
+Features:
+- Real-time object detection using YOLOv4-tiny
+- RTSP video streaming
+- JSON metadata publishing
+- Configurable thresholds and settings
+================================================
+Using config file: config.json
+=== Initializing AI Detection System ===
+Config loaded from: config.json
+=== Current Configuration ===
+Detection threshold: 0.25
+NMS threshold: 0.45
+Camera ID: 2
+Frame size: 1280x720
+Frame FPS: 30
+RTSP URL: rtsp://localhost:8554/stream
+RTSP Port: 8554
+Metadata interval: 100ms
+Metadata host: localhost:8080
+Metadata endpoint: /metadata
+Model path: ncnn-model/yolov4-tiny
+Use GPU: No
+Show display: No
+Draw detections: Yes
+=============================
+Loading YOLO model...
+YOLO model loaded successfully
+Initializing RTSP server...
+RTSP Pipeline: ( appsrc name=mysrc is-live=true format=time caps=video/x-raw,format=BGR,width=1280,height=720,framerate=30/1 ! videoconvert ! video/x-raw,format=I420 ! x264enc tune=zerolatency bitrate=2000 speed-preset=ultrafast profile=baseline ! rtph264pay name=pay0 pt=96 )
+Direct RTSP Server initialized
+Resolution: 1280x720 @ 30fps
+RTSP URL: rtsp://localhost:8554/stream
+RTSP server attached successfully to port 8554
+RTSP server loop started
+RTSP server thread started
+Direct RTSP Server started successfully
+Stream URL: rtsp://localhost:8554/stream
+VLC: Media > Open Network Stream > rtsp://localhost:8554/stream
+Initializing metadata publisher...
+Metadata Publisher initialized: localhost:8080/metadata
+Publish interval: 100ms
+Metadata Publisher started
+Initializing camera 2...
+Camera initialized successfully
+Actual frame size: 1280x720
+=== System Initialized Successfully ===
+=== Starting AI Detection System ===
+Press 'q' to quit, 's' for statistics, 'c' to show config
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:09:56.332Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:09:56.588Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:09:56.851Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:09:57.125Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:09:57.426Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:09:57.704Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:09:57.951Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+Media constructed, appsrc configured
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:09:58.229Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:09:58.470Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:09:58.719Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:09:58.966Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:09:59.238Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:09:59.479Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:09:59.730Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:09:59.982Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:00.262Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:00.513Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:00.792Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:01.051Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:01.342Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:01.651Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:01.899Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:02.143Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+Media constructed, appsrc configured
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:02.417Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:02.652Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:02.904Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:03.151Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:03.411Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:03.666Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:03.925Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:04.185Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:04.442Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:04.682Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+Media constructed, appsrc configured
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:04.975Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:05.222Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:05.479Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:05.713Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:05.960Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:06.227Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:06.485Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:06.727Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:06.960Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:07.220Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:07.455Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:07.722Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:07.961Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:08.218Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:08.459Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:08.727Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:08.958Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+Media constructed, appsrc configured
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:09.218Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:09.449Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:09.693Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:09.934Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:10.187Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:10.426Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:10.664Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:10.922Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:11.174Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:11.448Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:11.683Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:11.947Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:12.191Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:12.442Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:12.685Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:12.939Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:13.189Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:13.455Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:13.702Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:13.978Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:14.229Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:14.474Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:14.721Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:14.964Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:15.224Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:15.459Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:15.705Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:15.945Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:16.215Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:16.457Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:16.722Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:16.951Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:17.215Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:17.451Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:17.721Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+Media constructed, appsrc configured
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:17.992Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:18.250Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:18.488Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:18.725Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:18.968Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:19.222Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:19.474Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:19.730Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:19.989Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:20.228Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:20.482Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:20.719Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:20.972Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:21.219Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:21.468Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:21.715Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:21.969Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:22.212Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:22.465Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:22.698Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:22.936Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:23.211Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:23.458Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:23.716Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:23.961Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+Media constructed, appsrc configured
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:24.236Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:24.487Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:24.742Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:24.988Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:25.243Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:25.481Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:25.732Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:25.971Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+Media constructed, appsrc configured
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:26.220Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:26.487Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:26.727Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:26.970Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:27.227Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:27.470Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:27.723Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:27.975Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:28.213Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:28.461Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:28.699Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:28.958Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:29.268Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:29.523Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:29.769Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:30.025Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:30.273Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:30.522Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+Media constructed, appsrc configured
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:30.773Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:31.024Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:31.256Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:31.509Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:31.746Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:31.981Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:32.241Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:32.467Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:32.758Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:32.989Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:33.241Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:33.464Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:33.733Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:33.981Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:34.221Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:34.459Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:34.680Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+
+Received signal 2, shutting down gracefully...
+Stopping application...
+=== Statistics ===
+Runtime: 38 seconds
+Frames processed: 154
+Total detections: 0
+Metadata queue size: 0
+Metadata published: 0
+RTSP streaming: Active
+Metadata publisher: Active
+Average FPS: 4
+Detections per second: 0
+==================
+Application stopped successfully
+=== Metadata JSON ===
+{
+  "timestamp": "2025-10-10T19:10:34.938Z",
+  "camera_id": "camera_2",
+  "frame_width": 1280,
+  "frame_height": 720,
+  "detections": [
+  ],
+  "detection_count": 0
+}
+===================
+Application stopped
+Application exited with code: 0
+Metadata Publisher stopped
+RTSP server loop ended
+Direct RTSP Server stopped

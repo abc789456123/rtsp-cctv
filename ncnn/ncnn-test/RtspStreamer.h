@@ -1,8 +1,8 @@
 /**
  * @file RtspStreamer.h
- * @brief RTSP video streaming implementation
+ * @brief Simple GStreamer RTSP Server implementation
  * @author AI Detection System
- * @date 2025-09-28
+ * @date 2025-10-10
  */
 
 #ifndef RTSP_STREAMER_H
@@ -13,13 +13,19 @@
 #include <thread>
 #include <atomic>
 #include <memory>
+#include <mutex>
+#include <chrono>
+#include <vector>
+#include <gst/gst.h>
+#include <gst/rtsp-server/rtsp-server.h>
 
 /**
  * @class RtspStreamer
- * @brief Handles RTSP video streaming of processed frames
+ * @brief Simple RTSP Server using GStreamer MediaFactory
  * 
- * This class manages RTSP video streaming using OpenCV VideoWriter
- * and can stream detection results in real-time.
+ * Creates RTSP streams using UDP sink -> RTSP server pattern
+ * - rtsp://localhost:8554/stream - Video stream
+ * - rtsp://localhost:8554/metadata - Metadata stream (optional)
  */
 class RtspStreamer {
 public:
@@ -34,66 +40,76 @@ public:
     ~RtspStreamer();
     
     /**
-     * @brief Initialize RTSP streamer with parameters
-     * @param rtsp_url Target RTSP stream URL
+     * @brief Initialize RTSP server with parameters
+     * @param rtsp_url Not used (legacy compatibility)
      * @param width Frame width in pixels
      * @param height Frame height in pixels
      * @param fps Frames per second
+     * @param port RTSP server port (optional, default 8554)
      * @return true if initialization successful, false otherwise
      */
-    bool initialize(const std::string& rtsp_url, int width, int height, int fps);
+    bool initialize(const std::string& rtsp_url, int width, int height, int fps, int port = 8554);
     
     /**
-     * @brief Start the RTSP streaming
-     * @return true if streaming started successfully, false otherwise
+     * @brief Start the RTSP server
+     * @return true if server started successfully, false otherwise
      */
     bool start();
     
     /**
-     * @brief Stop the RTSP streaming
+     * @brief Stop the RTSP server
      */
     void stop();
     
     /**
-     * @brief Check if streaming is active
-     * @return true if streaming, false otherwise
+     * @brief Check if server is running
+     * @return true if running, false otherwise
      */
-    bool isStreaming() const { return streaming_; }
+    bool isRunning() const { return server_running_; }
     
     /**
-     * @brief Push a frame to the RTSP stream
+     * @brief Push a video frame (uses UDP sink to GStreamer pipeline)
      * @param frame OpenCV Mat frame to stream
      * @return true if frame pushed successfully, false otherwise
      */
     bool pushFrame(const cv::Mat& frame);
     
     /**
-     * @brief Get the current stream URL
-     * @return RTSP URL string
+     * @brief Get the video stream URL
+     * @return Video RTSP URL string
      */
-    std::string getStreamUrl() const { return rtsp_url_; }
+    std::string getStreamUrl() const;
 
 private:
-    std::string rtsp_url_;
+    int port_;
     int width_;
     int height_;
     int fps_;
     
-    std::unique_ptr<cv::VideoWriter> writer_;
-    std::atomic<bool> streaming_;
+    // GStreamer RTSP Server components
+    GstRTSPServer* server_;
+    GMainLoop* loop_;
+    std::thread server_thread_;
+    
+    // App source for frame injection - support multiple clients
+    std::vector<GstElement*> appsrc_list_;
+    GstRTSPMediaFactory* factory_;
+    
+    std::atomic<bool> server_running_;
     std::atomic<bool> initialized_;
-    
-    // FFmpeg command for RTSP streaming
-    std::string buildFFmpegCommand();
-    bool startFFmpegProcess();
-    void stopFFmpegProcess();
-    
-    FILE* ffmpeg_process_;
-    std::thread streaming_thread_;
-    cv::Mat current_frame_;
     std::mutex frame_mutex_;
+    std::mutex appsrc_mutex_;
     
-    void streamingLoop();
+    // Private methods
+    bool setupRtspServer();
+    void serverLoop();
+    
+    // GStreamer callback functions
+    static void onMediaConstructed(GstRTSPMediaFactory* factory, GstRTSPMedia* media, gpointer user_data);
+    static void onNeedData(GstElement* appsrc, guint unused_size, gpointer user_data);
+    static void onEnoughData(GstElement* appsrc, gpointer user_data);
+    static void onMediaPrepared(GstRTSPMedia* media, gpointer user_data);
+    static void onMediaUnprepared(GstRTSPMedia* media, gpointer user_data);
 };
 
 #endif // RTSP_STREAMER_H

@@ -43,22 +43,22 @@ make config
 
 ```json
 {
-  "detection_threshold": 0.25,        // 객체 감지 임계값
-  "nms_threshold": 0.45,              // NMS 임계값
-  "camera_id": 2,                     // 카메라 ID
-  "frame_width": 640,                 // 프레임 너비
-  "frame_height": 480,                // 프레임 높이
-  "frame_fps": 30,                    // 프레임 레이트
-  "rtsp_url": "rtsp://localhost:8554/stream", // RTSP 스트림 URL
-  "rtsp_port": 8554,                  // RTSP 포트
-  "metadata_publish_interval_ms": 100, // 메타데이터 전송 주기 (ms)
-  "metadata_host": "localhost",       // 메타데이터 서버 호스트
-  "metadata_port": 8080,              // 메타데이터 서버 포트
-  "metadata_endpoint": "/metadata",   // 메타데이터 엔드포인트
-  "model_path": "ncnn-model/yolov4-tiny", // YOLO 모델 경로
-  "use_gpu": false,                   // GPU 사용 여부
-  "show_display": true,               // 디스플레이 창 표시
-  "draw_detections": true             // 감지 결과 그리기
+  "detection_threshold": 0.25,
+  "nms_threshold": 0.45,
+  "camera_id": 2,
+  "frame_width": 1280,
+  "frame_height": 720,
+  "frame_fps": 30,
+  "rtsp_url": "rtsp://localhost:8554/stream",
+  "rtsp_port": 8554,
+  "metadata_publish_interval_ms": 100,
+  "metadata_host": "localhost",
+  "metadata_port": 8080,
+  "metadata_endpoint": "/metadata",
+  "model_path": "ncnn-model/yolov4-tiny",
+  "use_gpu": false,
+  "show_display": false,
+  "draw_detections": true
 }
 ```
 
@@ -87,8 +87,8 @@ make run
 {
   "timestamp": "2025-09-28T12:34:56.789Z",
   "camera_id": "camera_2",
-  "frame_width": 640,
-  "frame_height": 480,
+  "frame_width": 1280,
+  "frame_height": 720,
   "detections": [
     {
       "class_id": 1,

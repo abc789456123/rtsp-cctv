@@ -2,8 +2,10 @@ CXX = g++
 CXXFLAGS = -std=c++14 -O2 -Wall
 OPENCV_FLAGS = $(shell pkg-config --cflags opencv4)
 OPENCV_LIBS = $(shell pkg-config --libs opencv4)
-INCLUDES = -I/home/park/ncnn/include $(OPENCV_FLAGS)
-LIBS = -L/home/park/ncnn/lib -Wl,-rpath,/home/park/ncnn/lib -Wl,-rpath,/usr/local/lib -lncnn $(OPENCV_LIBS) -pthread -lcurl
+GSTREAMER_FLAGS = $(shell pkg-config --cflags gstreamer-1.0 gstreamer-rtsp-server-1.0 gstreamer-app-1.0 gstreamer-video-1.0)
+GSTREAMER_LIBS = $(shell pkg-config --libs gstreamer-1.0 gstreamer-rtsp-server-1.0 gstreamer-app-1.0 gstreamer-video-1.0)
+INCLUDES = -I/home/park/ncnn/include $(OPENCV_FLAGS) $(GSTREAMER_FLAGS)
+LIBS = -L/home/park/ncnn/lib -Wl,-rpath,/home/park/ncnn/lib -Wl,-rpath,/usr/local/lib -lncnn $(OPENCV_LIBS) $(GSTREAMER_LIBS) -pthread -lcurl
 
 # Source files
 SOURCES = main.cpp Application.cpp ConfigManager.cpp YoloDetector.cpp RtspStreamer.cpp MetadataPublisher.cpp
@@ -23,7 +25,7 @@ $(TARGET): $(OBJECTS)
 
 # Clean build files
 clean:
-	rm -f $(OBJECTS) $(TARGET) config.json
+	rm -f $(OBJECTS) $(TARGET)
 
 # Install dependencies
 install-deps:
