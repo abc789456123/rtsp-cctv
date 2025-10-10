@@ -2,6 +2,14 @@
 
 실시간 객체 감지 시스템으로 RTSP 스트리밍과 JSON 메타데이터를 지원합니다.
 
+## 개발 진행사항 기록
+
+openCV의 프레임을 rtsp로 전달하기 때문에 렉이 걸리고 화질이 크게 감소하는 문제가 발생함
+
+yolo모델이 적용된 프레임이 아니라 원 영상을 보내는 식으로 개선해야할 것 같음
+
+추가로 metadata 파싱 테스트도 아직 하지 않았음
+
 ## 주요 기능
 
 - **실시간 객체 감지**: YOLOv4-tiny 모델을 사용한 고속 객체 감지
@@ -34,10 +42,6 @@ make install-deps
 make
 ```
 
-### 설정 파일 생성
-```bash
-make config
-```
 
 ## 설정 파일 (config.json)
 
@@ -66,20 +70,14 @@ make config
 
 ### 기본 실행
 ```bash
-make run
+make
 ```
 
 ### 사용자 정의 설정 파일로 실행
 ```bash
-./ai_detection_system my_config.json
+./ai_detection_system config.json
 ```
 
-## 키보드 단축키
-
-- **q** 또는 **ESC**: 프로그램 종료
-- **s**: 통계 정보 출력
-- **c**: 현재 설정 출력
-- **r**: 통계 초기화
 
 ## JSON 메타데이터 형식
 
@@ -113,58 +111,6 @@ VLC 플레이어나 다른 RTSP 클라이언트에서 다음 URL로 접속:
 rtsp://localhost:8554/stream
 ```
 
-## 메타데이터 서버 예제
-
-Python Flask 서버 예제:
-```python
-from flask import Flask, request, jsonify
-
-app = Flask(__name__)
-
-@app.route('/metadata', methods=['POST'])
-def receive_metadata():
-    data = request.get_json()
-    print(f"Received {data['detection_count']} detections at {data['timestamp']}")
-    return jsonify({"status": "ok"})
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080)
-```
-
-## 확장 가능성
-
-이 시스템은 모듈식으로 설계되어 다음과 같은 확장이 용이합니다:
-
-1. **새로운 감지 모델**: `YoloDetector` 클래스를 상속하여 다른 모델 지원
-2. **다양한 스트리밍 프로토콜**: `RtspStreamer`를 확장하여 WebRTC, HLS 등 지원
-3. **메타데이터 전송 방식**: `MetadataPublisher`를 확장하여 MQTT, WebSocket 등 지원
-4. **추가 센서 데이터**: `Application` 클래스에 온도, 습도 등 센서 데이터 통합
-
-## 문제 해결
-
-### 카메라 접근 오류
-```bash
-# 카메라 권한 확인
-ls -la /dev/video*
-sudo usermod -a -G video $USER
-```
-
-### RTSP 스트리밍 문제
-- FFmpeg 설치 확인: `ffmpeg -version`
-- 방화벽 설정 확인: RTSP 포트(8554) 개방
-- GStreamer 설치: `sudo apt install gstreamer1.0-tools`
-
-### 의존성 문제
-```bash
-# OpenCV 설치 확인
-pkg-config --modversion opencv4
-
-# NCNN 라이브러리 확인
-ls -la /home/park/ncnn/lib/
-
-# libcurl 설치
-sudo apt install libcurl4-openssl-dev
-```
 
 ## 라이센스
 
